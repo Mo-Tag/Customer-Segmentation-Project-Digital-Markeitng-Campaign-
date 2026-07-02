@@ -1,4 +1,3 @@
-```markdown
 # 🎯 Customer Segmentation Engine: Precision Marketing via K-Means Clustering
 
 ### Transforming raw transactional data into actionable, revenue-driving customer personas.
@@ -14,28 +13,28 @@ The pipeline handles everything from raw data ingestion to a production-ready, s
 ## Key Features & Pipeline 🛠️
 
 **1. Data Preparation & Feature Engineering**
-- Cleaned raw marketing data (missing value imputation, type correction, duplicate checks).
-- Engineered derived features (e.g., total spending aggregation, age binning into generational cohorts).
+- Cleaned raw marketing data (missing value imputation, type correction, duplicate checks)
+- Engineered derived features (e.g., total spending aggregation, age binning into generational cohorts)
 
 **2. Exploratory Data Analysis (EDA)**
-- Analyzed distribution and skew of core numerical features (Age, Income, Total Spend) via histograms and density plots.
-- Detected outliers in Income and Spending across categorical segments (Education, Marital Status) using boxplots.
-- Ran correlation analysis to evaluate multicollinearity and identify key linear relationships prior to modeling.
-- Conducted cohort and behavioral analysis (e.g., campaign conversion rates by demographic).
+- Analyzed distribution and skew of core numerical features (Age, Income, Total Spend) via histograms and density plots
+- Detected outliers in Income and Spending across categorical segments (Education, Marital Status) using boxplots
+- Ran correlation analysis to evaluate multicollinearity and identify key linear relationships prior to modeling
+- Conducted cohort and behavioral analysis (e.g., campaign conversion rates by demographic)
 
 **3. Clustering Optimization**
-- Applied `StandardScaler` to normalize features (mean=0, variance=1), preventing high-magnitude features (like Income) from dominating distance calculations.
-- Used the **Elbow Method** (WCSS across K=2 to 9) to mathematically justify the optimal cluster count.
-- Validated cluster separation visually using **PCA** to project scaled data into a 2D component space.
+- Applied `StandardScaler` to normalize features (mean=0, variance=1), preventing high-magnitude features (like Income) from dominating distance calculations
+- Used the **Elbow Method** (WCSS across K=2 to 9) to mathematically justify the optimal cluster count
+- Validated cluster separation visually using **PCA** to project scaled data into a 2D component space
 
 **4. Persona Profiling**
-- Aggregated feature means by cluster to translate raw centroids into human-readable customer personas.
-- Assigned strategic, marketing-ready labels based on spending behavior, channel preference, and demographic traits.
+- Aggregated feature means by cluster to translate raw centroids into human-readable customer personas
+- Assigned strategic, marketing-ready labels based on spending behavior, channel preference, and demographic traits
 
 ## The 6 Customer Segments 📊
 
 | Cluster ID | Persona Name | Core Traits |
-|:----------:|:---|:---|
+|:---|:---|:---|
 | **0** | 🛍️ Window Shoppers | High web visit frequency, but lowest overall spending |
 | **1** | 🌐 Omnichannel Spenders | Older demographic; high engagement across multiple sales channels |
 | **2** | 📉 Lapsed Bargain Hunters | Low spending combined with high account inactivity |
@@ -45,11 +44,11 @@ The pipeline handles everything from raw data ingestion to a production-ready, s
 
 ## Visualizations Utilized 📈
 
-- **Distribution Plots**: Density and histogram analysis of Age, Income, and Spending to detect skew.
-- **Boxplots**: Income and Spending variance across Education and Marital Status.
-- **Correlation Heatmap**: Multicollinearity check prior to feature selection.
-- **Elbow Curve**: WCSS vs. K plot to justify cluster count selection.
-- **PCA Scatter Plot**: 2D visualization confirming clean separation between the 6 clusters.
+- **Distribution Plots**: Density and histogram analysis of Age, Income, and Spending to detect skew
+- **Boxplots**: Income and Spending variance across Education and Marital Status
+- **Correlation Heatmap**: Multicollinearity check prior to feature selection
+- **Elbow Curve**: WCSS vs. K plot to justify cluster count selection
+- **PCA Scatter Plot**: 2D visualization confirming clean separation between the 6 clusters
 
 ## Tech Stack 💻
 
@@ -64,20 +63,24 @@ The pipeline handles everything from raw data ingestion to a production-ready, s
 ## How to Run / Replicate ⚙️
 
 **1. Clone the repository**
+
 ```bash
 git clone https://github.com/your-username/customer-segmentation-kmeans.git
 cd customer-segmentation-kmeans
 ```
 
 **2. Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 **3. Add the dataset**
+
 Place the raw customer marketing dataset (CSV) into the `/data` directory.
 
 **4. Run the pipeline**
+
 ```bash
 python segmentation_pipeline.py
 ```
@@ -102,11 +105,10 @@ This setup allows new, unseen customers to be scored and assigned a persona in r
 This project demonstrates end-to-end proficiency in **unsupervised learning, feature engineering, and dimensionality reduction** — translating raw behavioral data into a segmentation framework that directly informs marketing spend and campaign strategy.
 
 **Key Takeaways**:
-- Data-driven cluster count selection (Elbow Method) over arbitrary guessing.
-- PCA-validated cluster separation confirms model reliability, not just statistical convenience.
-- Personas are directly actionable — each maps to a distinct marketing strategy.
+- Data-driven cluster count selection (Elbow Method) over arbitrary guessing
+- PCA-validated cluster separation confirms model reliability, not just statistical convenience
+- Personas are directly actionable — each maps to a distinct marketing strategy
 
 **Technologies**: Python • Scikit-Learn • K-Means • PCA • Pandas • Seaborn • Matplotlib
 
 ---
-```
