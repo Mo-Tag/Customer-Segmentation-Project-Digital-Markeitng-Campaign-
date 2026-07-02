@@ -60,32 +60,6 @@ The pipeline handles everything from raw data ingestion to a production-ready, s
 | **Visualization** | Matplotlib, Seaborn |
 | **Model Persistence** | Joblib / Pickle |
 
-## How to Run / Replicate ⚙️
-
-**1. Clone the repository**
-
-```bash
-git clone https://github.com/your-username/customer-segmentation-kmeans.git
-cd customer-segmentation-kmeans
-```
-
-**2. Install dependencies**
-
-```bash
-pip install -r requirements.txt
-```
-
-**3. Add the dataset**
-
-Place the raw customer marketing dataset (CSV) into the `/data` directory.
-
-**4. Run the pipeline**
-
-```bash
-python segmentation_pipeline.py
-```
-
-This executes the full workflow — cleaning, EDA, scaling, Elbow Method optimization, K-Means clustering, PCA visualization, and persona export.
 
 ## Model Deployment / Persistence 🚀
 
