@@ -61,19 +61,6 @@ The pipeline handles everything from raw data ingestion to a production-ready, s
 | **Model Persistence** | Joblib / Pickle |
 
 
-## Model Deployment / Persistence 🚀
-
-The final trained **K-Means model** and fitted **StandardScaler** are serialized and saved to the `/models` directory, ensuring identical preprocessing is applied to any new customer data at inference time:
-
-```python
-import joblib
-
-joblib.dump(kmeans_model, "models/kmeans_model.pkl")
-joblib.dump(scaler, "models/scaler.pkl")
-```
-
-This setup allows new, unseen customers to be scored and assigned a persona in real time — making the model **deployment-ready** for integration into a CRM or marketing automation platform.
-
 ## Conclusion
 
 This project demonstrates end-to-end proficiency in **unsupervised learning, feature engineering, and dimensionality reduction** — translating raw behavioral data into a segmentation framework that directly informs marketing spend and campaign strategy.
